@@ -2,5 +2,7 @@
     "ProductManagement": true,
     "SaleManagement": true,
     "CustomerManagement": true,
-    "SaleItem": true
+    "SaleItem": true,
+    "HumanResource": true,
+    "Marketing": true
 }
