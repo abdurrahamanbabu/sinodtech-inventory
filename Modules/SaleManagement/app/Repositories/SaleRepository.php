@@ -8,6 +8,10 @@ use Modules\SaleManagement\Models\Sale;
 
 class SaleRepository
 {
+    public function getAll($limit = 10)
+    {
+        return  Sale::latest()->with(['customer','items'])->paginate($limit);
+    }
     public  function store($data)
     {
         return Sale::create($data);

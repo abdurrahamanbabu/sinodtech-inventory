@@ -16,6 +16,11 @@ class SaleService
            $this->productService = $productService;
     }
 
+    public function getAll($limit = 10)
+    {
+        return $this->saleRepo->getAll($limit);
+    }
+
     public function store($data)
     {
 

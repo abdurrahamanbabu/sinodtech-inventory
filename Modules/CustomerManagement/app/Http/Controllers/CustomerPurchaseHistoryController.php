@@ -3,6 +3,7 @@
 namespace Modules\CustomerManagement\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Http\Request;
 use Modules\CustomerManagement\Services\CustomerPurchaseFrequencyService;
 use Modules\CustomerManagement\Services\CustomerService;
@@ -19,10 +20,13 @@ class CustomerPurchaseHistoryController extends Controller
     }
     public function purchaseRecord(int $customer_id, Request $request)
     {
-            $customer = $this->customerService->show($customer_id);
-            $sales = $this->saleService->customerPuchases($customer_id);
-            $report = $this->purchaseFrequency->report($customer_id);
-
-            return view('customermanagement::customers.purchase_histories',compact('sales','customer','report'));
+            try{
+                $customer = $this->customerService->show($customer_id);
+                $sales = $this->saleService->customerPuchases($customer_id);
+                $report = $this->purchaseFrequency->report($customer_id);
+                return view('customermanagement::customers.purchase_histories',compact('sales','customer','report'));
+            }catch(Exception $e){
+                return redirect()->back()->with('error', $e->getMessage());
+            }
     }
 }
