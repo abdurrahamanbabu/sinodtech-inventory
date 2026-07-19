@@ -1,0 +1,11 @@
+{
+    "name": "SaleManagement",
+    "alias": "salemanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SaleManagement\\Providers\\SaleManagementServiceProvider"
+    ],
+    "files": []
+}
