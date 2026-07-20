@@ -123,6 +123,11 @@ php artisan queue:work
 php artisan serve
 ```
 
+### Demo database:
+```
+ database/sql/inventory.sql
+```
+
 Visit:
 
 ```
