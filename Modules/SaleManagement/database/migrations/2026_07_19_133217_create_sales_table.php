@@ -18,9 +18,6 @@ return new class extends Migration
             $table->decimal('total_amount', 10, 2);
             $table->decimal('paid_amount', 10, 2);
             $table->decimal('due_amount', 10, 2);
-            $table->string('payment_method');
-            $table->string('status');
-            $table->string('comments')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
             $table->timestamps();
         });

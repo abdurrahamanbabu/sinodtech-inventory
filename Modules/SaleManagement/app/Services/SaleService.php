@@ -32,8 +32,7 @@ class SaleService
             "paid_amount" => $data['pay'],
             "due_amount" =>  $cart_total - $data['pay'],
             "invoice_no" => $this->generateInvoice(),
-            "payment_method" => "cash",
-            "status" => 1
+
         ];
 
        $sale = $this->saleRepo->store($sale_data);
