@@ -1,0 +1,8 @@
+- Features
+  - Authentication
+  - Multi-tenancy
+  - Media Manager
+- Technologies
+  - Laravel
+  - Bootstrap
+  - MySQL
