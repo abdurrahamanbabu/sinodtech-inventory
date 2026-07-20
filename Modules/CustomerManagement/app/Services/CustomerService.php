@@ -41,4 +41,15 @@ class CustomerService
    {
         return $this->customerRepo->delete($id);
    }
+
+   public function showInactiveCustomers()
+   {
+        return $this->customerRepo->showInactiveCustomers();
+   }
+
+   public function getAllByIds(array $ids = [])
+   {
+        return $this->customerRepo->getAllByIds($ids);
+   }
+
 }

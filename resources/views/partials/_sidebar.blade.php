@@ -39,6 +39,7 @@
                 @includeIf('productmanagement::menu')
                 @includeIf('salemanagement::menu')
                 @includeIf('customermanagement::menu')
+                @includeIf('marketing::menu')
 
               {{-- <li class="nav-item">
                 <a href="#" class="nav-link">

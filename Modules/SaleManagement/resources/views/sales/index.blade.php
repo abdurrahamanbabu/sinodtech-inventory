@@ -20,7 +20,7 @@
             <!--begin::Container-->
             <div class="container-fluid">
 
-
+  @includeIf('partials._form-status')
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -53,6 +53,10 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+
+                                <div class="w-100 gap-4">
+                                    {{ $sales->links() }}
+                                </div>
                             </div>
                         </div>
                     </div>

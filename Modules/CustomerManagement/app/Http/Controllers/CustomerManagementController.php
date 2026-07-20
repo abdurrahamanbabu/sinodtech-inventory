@@ -21,7 +21,7 @@ class CustomerManagementController extends Controller
     public function index()
     {
         try{
-              $customers = $this->customerService->getAll();
+            $customers = $this->customerService->getAll();
             return view('customermanagement::customers.index',compact('customers'));
         }catch(\Exception $e){
             return redirect()->back()->with('error', $e->getMessage());
@@ -100,5 +100,16 @@ class CustomerManagementController extends Controller
         }catch(\Exception $e){
              return redirect()->back()->with('error', $e->getMessage());
         }
+    }
+
+    public function inactiveCustomers()
+    {
+        try{
+            $customers = $this->customerService->showInactiveCustomers();
+            return view('customermanagement::customers.inactive_customers',compact('customers'));
+        }catch(\Exception $e){
+            return redirect()->back()->with('error', $e->getMessage());
+        }
+
     }
 }

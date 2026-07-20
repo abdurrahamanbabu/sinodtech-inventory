@@ -19,5 +19,11 @@
                 <p>Customer List</p>
             </a>
         </li>
+        <li class="nav-item">
+            <a href="{{ route('dashboard.customers.inactiveCustomers') }}" class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Inactive Customers</p>
+            </a>
+        </li>
     </ul>
 </li>

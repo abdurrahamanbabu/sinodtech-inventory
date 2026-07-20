@@ -2,6 +2,7 @@
 
 namespace Modules\CustomerManagement\Repositories;
 
+use Carbon\Carbon;
 use Modules\CustomerManagement\Models\Customer;
 
 class CustomerRepository
@@ -37,5 +38,19 @@ class CustomerRepository
     public function delete(int $id)
     {
         return Customer::where('id',$id)->delete();
+    }
+
+    public function showInactiveCustomers()
+    {
+        return Customer::withMax('sales', 'created_at')
+                 ->whereHas('sales')
+                 ->whereDoesntHave('sales', function ($query) {
+                    $query->where('created_at', '>=', Carbon::now()->subDays(config('app.inactive_day')));
+                 })->get();
+    }
+
+    public function getAllByIds(array $ids)
+    {
+        return Customer::whereIn('id',$ids)->get();
     }
 }

@@ -67,6 +67,10 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+
+                                    <div class="w-100 gap-4">
+                                        {{ $products->links() }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
