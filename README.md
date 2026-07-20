@@ -37,25 +37,21 @@ cd your-project
 composer install
 ```
 
-### 3. Install JavaScript dependencies
 
-```bash
-npm install
-```
 
-### 4. Create the environment file
+### 3. Create the environment file
 
 ```bash
 cp .env.example .env
 ```
 
-### 5. Generate the application key
+### 4. Generate the application key
 
 ```bash
 php artisan key:generate
 ```
 
-### 6. Configure the database
+### 5. Configure the database
 
 Update your `.env` file with your database credentials:
 
@@ -68,13 +64,13 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 7. Run migrations
+### 6. Run migrations
 
 ```bash
 php artisan migrate
 ```
 
-### 8. (Optional) Seed the database
+### 7. (Optional) Seed the database
 
 ```bash
 php artisan db:seed
@@ -121,7 +117,7 @@ Start the queue worker:
 php artisan queue:work
 ```
 
-### 10. Start the development server
+### Start the development server
 
 ```bash
 php artisan serve

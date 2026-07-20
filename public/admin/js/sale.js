@@ -55,7 +55,10 @@
           let total = parseFloat($("#cart_total").val());
           let pay = parseFloat($(this).val());
           let due = total - pay;
-          $(".due").val(due);
+          if(due < 0){
+            due = 0;
+          }
+          $(".due").val(due.toFixed(2));
        })
 
     });

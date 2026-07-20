@@ -23,7 +23,7 @@
         <div class="app-content">
             <!--begin::Container-->
             <div class="container-fluid">
-                  @includeIf('partials._form_status')
+                 @includeIf('partials._form_status')
 
                 <div class="row">
                     <div class="col-lg-12">

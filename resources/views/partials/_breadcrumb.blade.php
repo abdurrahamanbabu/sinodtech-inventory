@@ -22,3 +22,4 @@
      </div>
      <!--end::Container-->
  </div>
+@section('title', isset($page_title) ? $page_title:'Dashboard')

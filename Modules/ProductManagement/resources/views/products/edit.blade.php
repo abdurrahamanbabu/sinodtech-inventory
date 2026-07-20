@@ -27,6 +27,7 @@
         <div class="app-content">
             <!--begin::Container-->
             <div class="container-fluid">
+                @includeIf('partials._form_status')
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="card">

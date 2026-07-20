@@ -34,7 +34,6 @@ class SaleManagementController extends Controller
                 $sales = $this->saleService->getAll();
                 return view('salemanagement::sales.index',compact('sales'));
             }catch(Exception $e){
-                dd($e);
                 return redirect()->back()->with('error', $e->getMessage());
             }
     }

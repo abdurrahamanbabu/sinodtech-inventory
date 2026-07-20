@@ -20,10 +20,19 @@
                             {{ $product->quantity }} Units
                         </p>
                     </div>
-
+                    @if($product->quantity < 5)
+                    <span class="badge bg-warning px-3 py-2">
+                        Stock Low
+                    </span>
+                    @elseif($product->quantity == 0)
+                    <span class="badge bg-danger px-3 py-2">
+                        Stock Out
+                    </span>
+                    @else
                     <span class="badge bg-success px-3 py-2">
                         In Stock
                     </span>
+                    @endif
                 </div>
                 <hr>
                 <div class="d-flex gap-2">
